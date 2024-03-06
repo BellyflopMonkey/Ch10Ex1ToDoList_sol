@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Family Sign-In";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" action="/FamilyAccount/SignIn">
+    <div class="form-group">
+        <label for="familyName">Family Name</label>
+        <input type="text" class="form-control" id="familyName" name="familyName" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Guest</button>
+
+</form>
+
+<p>Don't have an account? <a href="/FamilyAccount/Create">Create Account</a></p>

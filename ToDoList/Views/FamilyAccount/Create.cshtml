@@ -1,0 +1,20 @@
+﻿@model FamilyAccount
+
+<h2>Create Family Account</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="FamilyName" class="control-label"></label>
+        <input asp-for="FamilyName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+    <div class="form-group">
+        <a class="btn btn-primary" asp-controller="FamilyAccount" asp-action="SignIn">Back</a>
+    </div>
+</form>
